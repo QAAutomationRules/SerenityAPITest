@@ -1,0 +1,157 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Build a Base Request Specification",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1766832100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user Builds a Base Request Specification",
+            "match": {
+              "location": "GitHubAPIStepDefinition.the_user_Builds_a_Base_Request_Specification()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "GET User details from Github",
+        "description": "",
+        "id": "github-api;get-user-details-from-github",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8687900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user has a Github account",
+            "match": {
+              "location": "GitHubAPIStepDefinition.the_user_has_a_Github_account()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6000706000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user executes a GET User call",
+            "match": {
+              "location": "GitHubAPIStepDefinition.the_user_executes_a_GET_User_call()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1741342800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user receives a response with the correct github project details",
+            "match": {
+              "location": "GitHubAPIStepDefinition.the_user_receives_a_response_with_the_correct_github_project_details()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "Build a Base Request Specification",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 21072100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user Builds a Base Request Specification",
+            "match": {
+              "location": "GitHubAPIStepDefinition.the_user_Builds_a_Base_Request_Specification()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "Create a new Repository in Github",
+        "description": "",
+        "id": "github-api;create-a-new-repository-in-github",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4856900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user has a Github account",
+            "match": {
+              "location": "GitHubAPIStepDefinition.the_user_has_a_Github_account()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2486791000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user Creates a new GitHub Repository",
+            "match": {
+              "location": "GitHubAPIStepDefinition.the_user_Creates_a_new_GitHub_Repository()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4318800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the github repository is created in the system",
+            "match": {
+              "location": "GitHubAPIStepDefinition.the_github_repository_is_created_in_the_system()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          }
+        ]
+      }
+    ],
+    "name": "GitHub API",
+    "description": "  As a github user\n  I want to be able to call the Github API to find out more information on github projects",
+    "id": "github-api",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/GithubAPI.feature",
+    "tags": []
+  }
+]

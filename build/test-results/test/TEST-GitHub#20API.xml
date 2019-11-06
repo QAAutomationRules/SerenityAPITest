@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GitHub API" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-08-09T18:57:26" hostname="LPC-HHJ27S2" time="12.11">
+  <properties/>
+  <testcase name="GET User details from Github" classname="GitHub API" time="9.551"/>
+  <testcase name="Create a new Repository in Github" classname="GitHub API" time="2.533"/>
+  <system-out><![CDATA[    ?[32mGiven ?[0m?[32mthe user Builds a Base Request Specification?[0m ?[90m# GitHubAPIStepDefinition.the_user_Builds_a_Base_Request_Specification()?[0m
+
+  @Smoke
+  Scenario: GET User details from Github                                      ?[90m# src/test/resources/features/GithubAPI.feature:10?[0m
+    ?[32mGiven ?[0m?[32mthe user has a Github account?[0m                                       ?[90m# GitHubAPIStepDefinition.the_user_has_a_Github_account()?[0m
+Request method:	GET
+Request URI:	https://api.github.com/user
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Fri, 09 Aug 2019 18:57:33 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Server: GitHub.com
+Status: 200 OK
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4999
+X-RateLimit-Reset: 1565380653
+Cache-Control: private, max-age=60, s-maxage=60
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP
+ETag: W/"8da7740f129b520aa7bb67c99dea99f7"
+Last-Modified: Mon, 29 Jul 2019 20:51:04 GMT
+X-GitHub-Media-Type: github.v3; format=json
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Content-Security-Policy: default-src 'none'
+Content-Encoding: gzip
+Vary: Accept-Encoding
+X-GitHub-Request-Id: 0709:0772:F9138:1769EA:5D4DC21D
+
+{
+    "login": "KTJ-Demo",
+    "id": 53450794,
+    "node_id": "MDQ6VXNlcjUzNDUwNzk0",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/53450794?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/KTJ-Demo",
+    "html_url": "https://github.com/KTJ-Demo",
+    "followers_url": "https://api.github.com/users/KTJ-Demo/followers",
+    "following_url": "https://api.github.com/users/KTJ-Demo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/KTJ-Demo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/KTJ-Demo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/KTJ-Demo/subscriptions",
+    "organizations_url": "https://api.github.com/users/KTJ-Demo/orgs",
+    "repos_url": "https://api.github.com/users/KTJ-Demo/repos",
+    "events_url": "https://api.github.com/users/KTJ-Demo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/KTJ-Demo/received_events",
+    "type": "User",
+    "site_admin": false,
+    "name": null,
+    "company": null,
+    "blog": "",
+    "location": null,
+    "email": null,
+    "hireable": null,
+    "bio": null,
+    "public_repos": 62,
+    "public_gists": 0,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2019-07-29T20:51:04Z",
+    "updated_at": "2019-07-29T20:51:04Z",
+    "private_gists": 0,
+    "total_private_repos": 1,
+    "owned_private_repos": 1,
+    "disk_usage": 194,
+    "collaborators": 0,
+    "two_factor_authentication": false,
+    "plan": {
+        "name": "free",
+        "space": 976562499,
+        "collaborators": 0,
+        "private_repos": 10000
+    }
+}
+    ?[32mWhen ?[0m?[32mthe user executes a GET User call?[0m                                    ?[90m# GitHubAPIStepDefinition.the_user_executes_a_GET_User_call()?[0m
+    ?[32mThen ?[0m?[32mthe user receives a response with the correct github project details?[0m ?[90m# GitHubAPIStepDefinition.the_user_receives_a_response_with_the_correct_github_project_details()?[0m
+12:57:36.304 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+TEST PASSED: GET User details from Github
+----------------------------------------------------------------------------
+    ?[32mGiven ?[0m?[32mthe user Builds a Base Request Specification?[0m ?[90m# GitHubAPIStepDefinition.the_user_Builds_a_Base_Request_Specification()?[0m
+
+  @Smoke
+  Scenario: Create a new Repository in Github           ?[90m# src/test/resources/features/GithubAPI.feature:17?[0m
+    ?[32mGiven ?[0m?[32mthe user has a Github account?[0m                 ?[90m# GitHubAPIStepDefinition.the_user_has_a_Github_account()?[0m
+Request method:	POST
+Request URI:	https://api.github.com/user/repos
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "c15cb682-f905-4bf5-a2cf-7155f767c298",
+    "description": "Where did you go to, if I may ask?' said Thorin to Gandalf as they rode along.  To look ahead,' said he.  And what brought you back in the nick of time?' Looking behind,' said he.",
+    "homepage": "https://github.com",
+    "_private": false,
+    "has_issues": true,
+    "has_projects": true,
+    "has_wiki": true,
+    "is_template": false,
+    "team_id": 523726827,
+    "auto_init": true,
+    "gitignore_template": "VisualStudio",
+    "license_template": "mit",
+    "allow_squash_merge": true,
+    "allow_merge_commit": true,
+    "allow_rebase_merge": true
+}
+HTTP/1.1 201 Created
+Date: Fri, 09 Aug 2019 18:57:38 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 6296
+Server: GitHub.com
+Status: 201 Created
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4998
+X-RateLimit-Reset: 1565380653
+Cache-Control: private, max-age=60, s-maxage=60
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP
+ETag: "5b9c095b4c0848cd1c024e2355496ddf"
+Location: https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298
+X-GitHub-Media-Type: github.v3; format=json
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Content-Security-Policy: default-src 'none'
+Vary: Accept-Encoding
+X-GitHub-Request-Id: ECDD:2391:A1E11:F1205:5D4DC220
+
+{
+    "id": 201524881,
+    "node_id": "MDEwOlJlcG9zaXRvcnkyMDE1MjQ4ODE=",
+    "name": "c15cb682-f905-4bf5-a2cf-7155f767c298",
+    "full_name": "KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298",
+    "private": false,
+    "owner": {
+        "login": "KTJ-Demo",
+        "id": 53450794,
+        "node_id": "MDQ6VXNlcjUzNDUwNzk0",
+        "avatar_url": "https://avatars2.githubusercontent.com/u/53450794?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/KTJ-Demo",
+        "html_url": "https://github.com/KTJ-Demo",
+        "followers_url": "https://api.github.com/users/KTJ-Demo/followers",
+        "following_url": "https://api.github.com/users/KTJ-Demo/following{/other_user}",
+        "gists_url": "https://api.github.com/users/KTJ-Demo/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/KTJ-Demo/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/KTJ-Demo/subscriptions",
+        "organizations_url": "https://api.github.com/users/KTJ-Demo/orgs",
+        "repos_url": "https://api.github.com/users/KTJ-Demo/repos",
+        "events_url": "https://api.github.com/users/KTJ-Demo/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/KTJ-Demo/received_events",
+        "type": "User",
+        "site_admin": false
+    },
+    "html_url": "https://github.com/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298",
+    "description": "Where did you go to, if I may ask?' said Thorin to Gandalf as they rode along.  To look ahead,' said he.  And what brought you back in the nick of time?' Looking behind,' said he.",
+    "fork": false,
+    "url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298",
+    "forks_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/forks",
+    "keys_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/teams",
+    "hooks_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/hooks",
+    "issue_events_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/events",
+    "assignees_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/tags",
+    "blobs_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/languages",
+    "stargazers_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/stargazers",
+    "contributors_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/contributors",
+    "subscribers_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/subscribers",
+    "subscription_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/subscription",
+    "commits_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/merges",
+    "archive_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/downloads",
+    "issues_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/labels{/name}",
+    "releases_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298/deployments",
+    "created_at": "2019-08-09T18:57:37Z",
+    "updated_at": "2019-08-09T18:57:37Z",
+    "pushed_at": "2019-08-09T18:57:38Z",
+    "git_url": "git://github.com/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298.git",
+    "ssh_url": "git@github.com:KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298.git",
+    "clone_url": "https://github.com/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298.git",
+    "svn_url": "https://github.com/KTJ-Demo/c15cb682-f905-4bf5-a2cf-7155f767c298",
+    "homepage": "https://github.com",
+    "size": 0,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": null,
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": null,
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 0,
+    "default_branch": "master",
+    "permissions": {
+        "admin": true,
+        "push": true,
+        "pull": true
+    },
+    "allow_squash_merge": true,
+    "allow_merge_commit": true,
+    "allow_rebase_merge": true,
+    "network_count": 0,
+    "subscribers_count": 1
+}
+    ?[32mWhen ?[0m?[32mthe user Creates a new GitHub Repository?[0m       ?[90m# GitHubAPIStepDefinition.the_user_Creates_a_new_GitHub_Repository()?[0m
+    ?[32mThen ?[0m?[32mthe github repository is created in the system?[0m ?[90m# GitHubAPIStepDefinition.the_github_repository_is_created_in_the_system()?[0m
+12:57:38.866 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+TEST PASSED: Create a new Repository in Github
+----------------------------------------------------------------------------
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,57 @@
+defaultTasks 'clean','test','aggregate'
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.67")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+apply from: "$rootDir/gradle/libraries.gradle"
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile libs.logback,
+            libs.jackson,
+            libs.jsonschemavalidator,
+            libs.javafaker,
+            libs.gson
+
+    testCompile libs.test.serenity.browsermob,
+            libs.test.serenity.core,
+            libs.test.serenity.cucumber,
+            libs.test.serenity.model,
+            libs.test.serenity.junit,
+            libs.test.serenity.reports,
+            libs.test.serenity.reportresources,
+            libs.test.serenity.restassured,
+            libs.test.serenity.spring,
+            libs.test.serenity.stats,
+            libs.test.serenity.testutils,
+            libs.test.serenity.zalenium,
+            libs.test.assertj,
+            libs.test.junit
+}
+
+test {
+    systemProperties System.getProperties()
+}
+
+gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)

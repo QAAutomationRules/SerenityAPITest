@@ -1,0 +1,41 @@
+ext{
+    slf4jVersion = '1.7.26'
+    serenityCoreVersion = '2.0.67'
+    serenityCucumberVersion = '1.9.45'
+    assertJVersion ='3.13.2'
+    junitVersion='4.12'
+    logbackVersion ='1.2.3'
+    jacksonVersion = '2.9.9.3'
+    jsonSchemaValidator = '4.0.0'
+    picoContainerVersion = '4.7.1'
+    javaFakerVersion = '1.0.0'
+    gsonVersion = '2.8.5'
+
+    libs = [
+            slf4jApi: "org.slf4j:slf4j-api:$slf4jVersion",
+            logback: "ch.qos.logback:logback-classic:${logbackVersion}",
+            jackson: "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}",
+            jsonschemavalidator: "io.rest-assured:json-schema-validator:${jsonSchemaValidator}",
+            javafaker: "com.github.javafaker:javafaker:${javaFakerVersion}",
+            gson: "com.google.code.gson:gson:${gsonVersion}",
+
+            test: [
+                    serenity: [
+                            browsermob:"net.serenity-bdd:serenity-browsermob-plugin:${serenityCoreVersion}",
+                            core: "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+                            model: "net.serenity-bdd:serenity-model:${serenityCoreVersion}",
+                            junit: "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
+                            cucumber: "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
+                            reports: "net.serenity-bdd:serenity-reports:${serenityCoreVersion}",
+                            reportresources: "net.serenity-bdd:serenity-report-resources:${serenityCoreVersion}",
+                            restassured: "net.serenity-bdd:serenity-rest-assured:${serenityCoreVersion}",
+                            spring: "net.serenity-bdd:serenity-spring:${serenityCoreVersion}",
+                            stats:  "net.serenity-bdd:serenity-stats:${serenityCoreVersion}",
+                            testutils: "net.serenity-bdd:serenity-test-utils:${serenityCoreVersion}",
+                            zalenium: "net.serenity-bdd:serenity-zalenium:${serenityCoreVersion}",
+                    ],
+                    junit: "junit:junit:${junitVersion}",
+                    assertj: "org.assertj:assertj-core:${assertJVersion}",
+            ]
+    ]
+}
